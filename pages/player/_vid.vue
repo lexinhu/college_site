@@ -10,6 +10,7 @@
     <div id="J_prismPlayer" class="prism-player"/>
 
   </div>
+
 </template>
 
 <style scoped>
@@ -41,10 +42,10 @@ export default {
     new Aliplayer({
       id: 'J_prismPlayer',
       width: '100%',
+      height: '500px',
       vid: this.vid,
       playauth: this.playauth,
       encryptType: 1 // 当播放私有加密流时需要设置。
-
     }, function(player) {
       console.log('播放器创建好了。')
     })
