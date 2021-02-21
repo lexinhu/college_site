@@ -3,14 +3,17 @@
 # 本地调试：
 
 $ npm install
+
 $ npm run dev
 
 # 打包运行
 
 $ npm run build
+
 $ npm start
 
 # 注意点
 
 `nuxt.config.js` 文件可以配置一些基本的网站信息。
-`utils/request.js` 文件中指定了 api 接口地址.
+
+`utils/request.js` 文件中指定了 api 接口地址。
