@@ -6,7 +6,7 @@
           <section class="mr30 pt10">
             <section class="c-infor-tabTitle c-tab-title">
               <a href="javascript: void(0)" title="全部问答" onclick="submitForm(0,'type')" class="current">全部问答</a>
-              <a href="javascript: void(0)" title="课程问答" onclick="submitForm(1,'type')">课程问答</a>
+              <a href="javascript: void(0)" title="视频集问答" onclick="submitForm(1,'type')">视频集问答</a>
               <a href="javascript: void(0)" title="学习分享" onclick="submitForm(2,'type')">学习分享</a>
             </section>
             <div class="js-wrap">

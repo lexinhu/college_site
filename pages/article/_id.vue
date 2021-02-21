@@ -30,7 +30,7 @@
               </section>
               <div id="art-infor-body">
                 <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;text-indent:2em;background-color:#FFFFFF;">
-                  关于<a class="a-tips-Article-QQ" href="http://edu.qq.com/kszx/ielts.shtml" style="outline:none;color:#000000;text-decoration:none;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536DA6;">雅思</a>(<a target="_blank" href="http://class.qq.com/category/94.html" class="a-tips-Article-QQ" style="outline:none;color:#000000;text-decoration:none;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536DA6;">课程</a>)精读，首先，认真选择精读文章，只需10篇剑桥文章，你的成绩就可以在7.5以上。但这一前提是你不是流于形式，而是认真走心的读。
+                  关于<a class="a-tips-Article-QQ" href="http://edu.qq.com/kszx/ielts.shtml" style="outline:none;color:#000000;text-decoration:none;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536DA6;">雅思</a>(<a target="_blank" href="http://class.qq.com/category/94.html" class="a-tips-Article-QQ" style="outline:none;color:#000000;text-decoration:none;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536DA6;">视频集</a>)精读，首先，认真选择精读文章，只需10篇剑桥文章，你的成绩就可以在7.5以上。但这一前提是你不是流于形式，而是认真走心的读。
                 </p>
                 <p style="margin-top:0px;margin-bottom:29px;padding:0px;line-height:28px;font-family:宋体, Arial, sans-serif;font-size:15.9996px;white-space:normal;text-indent:2em;background-color:#FFFFFF;">
                   我一直认为雅思精读最大的目的在于四点：

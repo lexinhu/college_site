@@ -33,7 +33,7 @@
                       <div class="clear"/>
                     </aside>
                     <h3 class="hLh30 txtOf">
-                      <em class="icon16 q-tw">&nbsp;</em> <span class="c-blue fsize14"> goddess</span> <span class="c-999 fsize14"> 课程提问</span>
+                      <em class="icon16 q-tw">&nbsp;</em> <span class="c-blue fsize14"> goddess</span> <span class="c-999 fsize14"> 视频集提问</span>
                     </h3>
                   </section>
                   <section class="ml50 pl10">

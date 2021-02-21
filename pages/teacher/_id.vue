@@ -1,14 +1,14 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
-    <!-- 讲师介绍 开始 -->
+    <!-- 作者介绍 开始 -->
     <section class="container">
       <header class="comm-title">
         <h2 class="fl tac">
-          <span class="c-333">讲师介绍</span>
+          <span class="c-333">作者介绍</span>
         </h2>
       </header>
       <div class="t-infor-wrap">
-        <!-- 讲师基本信息 开始 -->
+        <!-- 作者基本信息 开始 -->
         <section class="fl t-infor-box c-desc-content">
           <div class="mt20 ml20">
             <section class="t-infor-pic">
@@ -17,7 +17,7 @@
             <h3 class="hLh30">
               <span class="fsize24 c-333">{{ teacher.name }}
                 &nbsp;
-                {{ teacher.level===1?'高级讲师':'首席讲师' }}
+                {{ teacher.level===1?'高级作者':'首席作者' }}
               </span>
             </h3>
             <section class="mt10">
@@ -29,14 +29,14 @@
             <div class="clear"/>
           </div>
         </section>
-        <!-- /讲师基本信息 结束 -->
+        <!-- 作者基本信息 结束 -->
         <div class="clear"/>
       </div>
       <section class="mt30">
         <div>
           <header class="comm-title all-teacher-title c-course-content">
             <h2 class="fl tac">
-              <span class="c-333">主讲课程</span>
+              <span class="c-333">作品集</span>
             </h2>
             <section class="c-tab-title">
               <a href="javascript: void(0)">&nbsp;</a>
@@ -49,7 +49,7 @@
           </section>
           <!-- /无数据提示 结束-->
 
-          <!-- 课程列表 开始-->
+          <!-- 视频集列表 开始-->
           <article class="comm-course-list">
             <ul class="of">
               <li v-for="course in courseList" :key="course.id">
@@ -71,11 +71,11 @@
             </ul>
             <div class="clear"/>
           </article>
-          <!-- /课程列表 结束-->
+          <!-- /视频集列表 结束-->
         </div>
       </section>
     </section>
-    <!-- /讲师介绍 结束 -->
+    <!-- /作者介绍 结束 -->
   </div>
 </template>
 <script>

@@ -12,7 +12,7 @@
         <div class="mt40">
           <section v-if="collectList.length === 0" class="no-data-wrap">
             <em class="icon30 no-data-ico">&nbsp;</em>
-            <span class="c-666 fsize14 ml10 vam">您还没有收藏课程哦！</span>
+            <span class="c-666 fsize14 ml10 vam">您还没有收藏视频哦！</span>
           </section>
 
           <!-- 表格 -->
@@ -23,7 +23,7 @@
             fit
             highlight-current-row>
 
-            <el-table-column label="课程信息" align="center" >
+            <el-table-column label="视频信息" align="center" >
               <template slot-scope="scope">
                 <div class="info" >
                   <div class="pic">
@@ -35,7 +35,7 @@
                 </div>
               </template>
             </el-table-column>
-            <el-table-column label="讲师名称" align="center">
+            <el-table-column label="作者名称" align="center">
               <template slot-scope="scope">
                 {{ scope.row.teacherName }}
               </template>

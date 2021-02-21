@@ -1,10 +1,10 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
-    <!-- 讲师列表 开始 -->
+    <!-- 作者列表 开始 -->
     <section class="container">
       <header class="comm-title">
         <h2 class="fl tac">
-          <span class="c-333">名师团队</span>
+          <span class="c-333">作者大咖</span>
         </h2>
       </header>
       <section class="c-sort-box unBr">
@@ -43,7 +43,7 @@
         </div>
       </section>
     </section>
-    <!-- /讲师列表 结束 -->
+    <!-- /作者列表 结束 -->
   </div>
 </template>
 <script>

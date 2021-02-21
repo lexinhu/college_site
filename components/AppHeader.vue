@@ -3,7 +3,7 @@
   <header id="header">
     <section class="container">
       <h1 id="logo">
-        <a href="/" title="小湖学院">
+        <a href="/" title="小湖视频网">
           <img src="~/assets/img/logo.png" width="100%" alt="小湖学院">
         </a>
       </h1>
@@ -13,17 +13,18 @@
             <a>首页</a>
           </router-link>
           <router-link to="/course" tag="li" active-class="current">
-            <a>课程</a>
+            <a>视频</a>
           </router-link>
           <router-link to="/teacher" tag="li" active-class="current">
-            <a>名师</a>
+            <a>作者</a>
           </router-link>
-          <router-link to="/article" tag="li" active-class="current">
+
+          <!-- <router-link to="/article" tag="li" active-class="current">
             <a>文章</a>
           </router-link>
           <router-link to="/question" tag="li" active-class="current">
             <a>问答</a>
-          </router-link>
+          </router-link> -->
         </ul>
         <!-- / nav -->
         <ul class="h-r-login">
@@ -86,7 +87,7 @@
         <aside class="h-r-search">
           <form action="#" method="post">
             <label class="h-r-s-box">
-              <input type="text" placeholder="搜索课程" name="queryCourse.courseName" value>
+              <input type="text" placeholder="搜索视频" name="queryCourse.courseName" value>
               <button type="submit" class="s-btn">
                 <em class="icon18">&nbsp;</em>
               </button>
@@ -122,7 +123,7 @@ export default {
     this.token = this.$route.query.token
     if (this.token) {
       // 将token存在cookie中
-      cookie.set('lakeCollege_jwt_token', this.token, { domain: 'localhost' })
+      cookie.set('lakeCollege_jwt_token', this.token, { domain: '127.0.0.1' })
       // 跳转页面：擦除url中的token
       // 注意：window对象在created方法中无法被访问，因此要写在mounted中
       window.location.href = '/'

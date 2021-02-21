@@ -13,9 +13,9 @@
         <div class="fl sao">
           <div class="fl code">
             <!-- <img id="qrious" src="~/assets/img/erweima.png" alt=""> -->
-            <qriously :value="payObj.code_url" :size="338"/>
+            <!-- <qriously :value="payObj.code_url" :size="338"/> -->
           </div>
-          <div style="color: red; text-align:center;">请使用微信扫一扫</div>
+          <!-- <div style="color: red; text-align:center;">请使用微信扫一扫</div> -->
         </div>
         <div class="clearfix"/>
         <!-- <p><a href="pay.html" target="_blank"> 其他支付方式</a></p> -->
@@ -54,14 +54,12 @@ export default {
     // 查询订单状态
     queryPayStatus() {
       orderApi.queryPayStatus(this.payObj.out_trade_no).then(response => {
-        console.log('查询订单状态：' + response.code)
-
         // 支付成功后的页面跳转
         if (response.success) {
           this.$message.success(response.message)
           console.log('清除定时器')
           clearInterval(this.timer)
-          // 三秒后跳转到课程详情页面观看视频
+          // 三秒后跳转到视频集详情页面观看视频
           setTimeout(() => {
             this.$router.push({ path: '/course/' + this.payObj.course_id })
           }, 3000)

@@ -16,6 +16,10 @@
           <input v-model="member.mobile" type="text" placeholder="手机号" >
           <i class="iconfont icon-phone" />
         </div>
+        <div class="input-prepend restyle no-radius">
+          <input v-model="member.email" type="text" placeholder="邮箱" >
+          <i class="iconfont icon-email" />
+        </div>
         <div class="input-prepend restyle no-radius" style="position:relative">
           <input v-model="member.code" type="text" placeholder="验证码" >
           <i class="iconfont icon-yanzhengma" />
@@ -46,7 +50,7 @@
         <h6>社交帐号直接注册</h6>
         <ul>
           <li>
-            <a id="weixin" class="weixin" href="http://localhost:8160/api/ucenter/wx/login">
+            <a id="weixin" class="weixin" href="#">
               <i class="iconfont icon-weixin" />
             </a>
           </li>
@@ -72,6 +76,7 @@ export default {
     return {
       member: {
         mobile: '',
+        email: '',
         code: '',
         nickname: '',
         password: ''
@@ -85,19 +90,33 @@ export default {
     // 获取验证码
     getCodeFun() {
       if (this.sending) return // 如果已点击则退出，防止多次重复提交
-      if (this.member.mobile === '') {
-        this.$message.error('手机号不能为空')
+
+      if (this.member.mobile === '' && this.member.email === '') {
+        this.$message.error('手机号或邮箱不能同时为空')
         return
       }
-      registerApi.sendMessage(this.member.mobile).then(response => {
-        this.sending = true // 用户已点击
-        // 倒计时
-        this.timeDown()
-        // 提示发送成功
-        this.$message.success(response.message)
-      }).catch(error => {
-        this.$message.success(error.message)
-      })
+      this.$message.warning('正在校验数据')
+      if (this.member.mobile !== '') {
+        registerApi.sendMessageByMobile(this.member.mobile).then(response => {
+          this.sending = true // 用户已点击
+          // 倒计时
+          this.timeDown()
+          // 提示发送成功
+          this.$message.success(response.message)
+        }).catch(error => {
+          this.$message.success(error.message)
+        })
+      } else if (this.member.email !== '') {
+        registerApi.sendMessageByEmail(this.member.email).then(response => {
+          this.sending = true // 用户已点击
+          // 倒计时
+          this.timeDown()
+          // 提示发送成功
+          this.$message.success(response.message)
+        }).catch(error => {
+          this.$message.success(error.message)
+        })
+      }
     },
 
     // 倒计时

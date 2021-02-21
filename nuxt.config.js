@@ -1,14 +1,17 @@
 module.exports = {
+
+  server: {
+    port: 3001 // 线上端口
+  },
+
   /*
   ** Headers of the page
   */
   head: {
-    title: '小湖学院 - Java视频|HTML5视频|前端视频|Python视频|大数据视频',
+    title: '小湖视频网 - 全网最大的视频播放网站',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'keywords', content: '小湖学院,IT在线视频教程,Java视频,HTML5视频,前端视频,Python视频,大数据视频' },
-      { name: 'description', content: '小湖学院是国内领先的IT在线视频学习平台、职业教育平台。' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -40,7 +43,8 @@ module.exports = {
   plugins: [
     { src: '~/plugins/nuxt-swiper-plugin.js', ssr: false },
     { src: '~/plugins/element-ui-plugin.js', ssr: false },
-    { src: '~/plugins/vue-qriously-plugin.js', ssr: true }
+    { src: '~/plugins/vue-qriously-plugin.js', ssr: true },
+    { src: '~/plugins/tcplayer.js', ssr: false }
   ]
 }
 

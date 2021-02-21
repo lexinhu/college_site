@@ -1,23 +1,23 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
-    <!-- 课程详情 开始 -->
+    <!-- 视频集详情 开始 -->
     <section class="container">
 
-      <!-- 课程所属分类 开始 -->
+      <!-- 视频集所属分类 开始 -->
       <section class="path-wrap txtOf hLh30">
         <a href="/" title class="c-999 fsize14">首页</a>
         \
-        <a href="/course" title class="c-999 fsize14">课程列表</a>
+        <a href="/course" title class="c-999 fsize14">视频集列表</a>
         \
         <a :href="'/course?subjectParentId='+course.subjectLevelOneId" class="c-333 fsize14">{{ course.subjectLevelOne }}</a>
         \
         <a :href="'/course?subjectParentId='+course.subjectLevelOneId+'&subjectId='+course.subjectLevelTwoId" class="c-333 fsize14">{{ course.subjectLevelTwo }}</a>
       </section>
-      <!-- /课程所属分类 结束 -->
+      <!-- /视频集所属分类 结束 -->
 
-      <!-- 课程基本信息 开始 -->
-      <div>
-        <article class="c-v-pic-wrap" style="height: 357px;">
+      <!-- 视频集基本信息 开始 -->
+      <div class="courseHeader">
+        <article class="c-v-pic-wrap" >
           <section id="videoPlay" class="p-h-video-box">
             <img :src="course.cover" :alt="course.title" class="dis c-v-pic">
           </section>
@@ -32,7 +32,7 @@
               <b class="c-yellow" style="font-size:24px;">￥{{ course.price }}</b>
             </section>
             <section class="c-attr-mt c-attr-undis">
-              <span class="c-fff fsize14">主讲： {{ course.teacherName }}&nbsp;&nbsp;&nbsp;</span>
+              <span class="c-fff fsize14">作者： {{ course.teacherName }}&nbsp;&nbsp;&nbsp;</span>
             </section>
 
             <section class="c-attr-mt of">
@@ -99,7 +99,7 @@
         </aside>
         <div class="clear"/>
       </div>
-      <!-- /课程基本信息 结束 -->
+      <!-- /视频集基本信息 结束 -->
 
       <div class="mt20 c-infor-box">
         <article class="fl col-7">
@@ -107,15 +107,15 @@
             <div class="i-box">
               <div>
                 <section id="c-i-tabTitle" class="c-infor-tabTitle c-tab-title">
-                  <a name="c-i" class="current" title="课程详情">课程详情</a>
+                  <a name="c-i" class="current" title="视频详情">视频详情</a>
                 </section>
               </div>
               <article class="ml10 mr10 pt20">
 
-                <!-- 课程详情介绍 开始 -->
+                <!-- 视频集详情介绍 开始 -->
                 <div>
                   <h6 class="c-i-content c-infor-title">
-                    <span>课程介绍</span>
+                    <span>视频介绍</span>
                   </h6>
                   <div class="course-txt-body-wrap">
                     <section class="course-txt-body" v-html="course.description">
@@ -124,18 +124,18 @@
                     </section>
                   </div>
                 </div>
-                <!-- /课程详情介绍 结束 -->
+                <!-- /视频集详情介绍 结束 -->
 
-                <!-- 课程大纲 开始-->
+                <!-- 视频集大纲 开始-->
                 <div class="mt50">
                   <h6 class="c-g-content c-infor-title">
-                    <span>课程大纲</span>
+                    <span>视频大纲</span>
                   </h6>
                   <section class="mt20">
                     <div class="lh-menu-wrap">
                       <menu id="lh-menu" class="lh-menu mt10 mr10">
                         <ul>
-                          <!-- 课程章节目录 -->
+                          <!-- 视频集章节目录 -->
                           <li v-for="chapter in chapterList" :key="chapter.id" class="lh-menu-stair">
                             <a title="chapter.title" href="javascript: void(0)" class="current-1">
                               <em class="lh-menu-i-1 icon18 mr10"/>{{ chapter.title }}
@@ -177,17 +177,17 @@
                       </menu>
                     </div>
                   </section>
-                  <!-- /课程大纲 结束 -->
+                  <!-- /视频集大纲 结束 -->
               </div></article>
             </div>
           </section>
         </article>
         <aside class="fl col-3">
           <div class="i-box">
-            <!-- 主讲讲师 开始-->
+            <!-- 主讲作者 开始-->
             <div>
               <section class="c-infor-tabTitle c-tab-title">
-                <a title href="javascript:void(0)">主讲讲师</a>
+                <a title href="javascript:void(0)">视频作者</a>
               </section>
               <section class="stud-act-list">
                 <ul style="height: auto;">
@@ -207,13 +207,13 @@
                 </ul>
               </section>
             </div>
-            <!-- /主讲讲师 结束 -->
+            <!-- /主讲作者 结束 -->
           </div>
         </aside>
         <div class="clear"/>
       </div>
     </section>
-    <!-- /课程详情 结束 -->
+    <!-- /视频集详情 结束 -->
   </div>
 </template>
 
@@ -295,5 +295,20 @@ export default {
 .course-txt-body ul li{
     list-style: disc;
 }
+.courseHeader {
+  display: flex;
+  height: 350px;
+}
+.c-attr-wrap {
+  width: 40%;
+}
+.c-v-pic-wrap {
+  flex: 1;
+}
+.c-v-pic {
+  width:100%;
+	height:360px;
+}
+
 </style>
 

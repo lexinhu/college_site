@@ -1,22 +1,20 @@
 <template>
-
   <div>
-
-    <div class="block">
-      <el-carousel height="550px">
+    <div class="block" style="width: 1230px;margin: 20px auto">
+      <el-carousel height="600px" >
         <el-carousel-item v-for="topBannerAd in topBannerAdList" :key="topBannerAd.id">
-          <img :src="topBannerAd.imageUrl" :alt="topBannerAd.title">
+          <a :href="topBannerAd.linkUrl" target="_blank"><img :src="topBannerAd.imageUrl" :alt="topBannerAd.title" class="adClass"></a>
         </el-carousel-item>
       </el-carousel>
     </div>
 
     <div id="aCoursesList">
-      <!-- 网校课程 开始 -->
+      <!-- 视频集开始 -->
       <div>
         <section class="container">
           <header class="comm-title">
             <h2 class="tac">
-              <span class="c-333">热门课程</span>
+              <span class="c-333">热门视频</span>
             </h2>
           </header>
           <div>
@@ -54,18 +52,18 @@
               <div class="clear"/>
             </article>
             <section class="tac pt20">
-              <a href="course" title="全部课程" class="comm-btn c-btn-2">全部课程</a>
+              <a href="course" title="全部视频" class="comm-btn c-btn-2">全部视频</a>
             </section>
           </div>
         </section>
       </div>
-      <!-- /网校课程 结束 -->
-      <!-- 网校名师 开始 -->
+      <!-- 视频集 结束 -->
+      <!-- 作者 开始 -->
       <div>
         <section class="container">
           <header class="comm-title">
             <h2 class="tac">
-              <span class="c-333">名师大咖</span>
+              <span class="c-333">作者大咖</span>
             </h2>
           </header>
           <div>
@@ -87,12 +85,12 @@
               <div class="clear"/>
             </article>
             <section class="tac pt20">
-              <a href="teacher" title="全部讲师" class="comm-btn c-btn-2">全部讲师</a>
+              <a href="teacher" title="全部作者" class="comm-btn c-btn-2">全部作者</a>
             </section>
           </div>
         </section>
       </div>
-    <!-- /网校名师 结束 -->
+    <!-- 作者 结束 -->
     </div>
   </div>
 </template>
@@ -107,10 +105,12 @@ export default {
     const topBannerAdListResponse = await indexApi.getTopBannerAdList()
     const topBannerAdList = topBannerAdListResponse.data.items
 
-    // 获取课程和讲师数据
+    // 获取视频集和作者数据
     const indexDataResponse = await indexApi.getIndexData()
     const courseList = indexDataResponse.data.courseList
     const teacherList = indexDataResponse.data.teacherList
+
+    console.log(topBannerAdList)
 
     return {
       topBannerAdList,
@@ -128,5 +128,15 @@ export default {
 
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
+  }
+
+  .adClass {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    margin:auto;
   }
 </style>

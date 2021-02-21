@@ -10,10 +10,10 @@
       <form action="register">
         <div class="input-prepend restyle">
           <input
-            v-model="user.mobile"
+            v-model="user.userInfo"
             type="text"
-            placeholder="手机号">
-          <i class="iconfont icon-phone"/>
+            placeholder="手机号 / 邮箱">
+          <i class="iconfont icon-user"/>
         </div>
         <div class="input-prepend">
           <input
@@ -34,7 +34,7 @@
       <div class="more-sign">
         <h6>社交帐号登录</h6>
         <ul>
-          <li><a id="weixin" class="weixin" href="http://localhost:8160/api/ucenter/wx/login"><i class="iconfont icon-weixin"/></a></li>
+          <li><a id="weixin" class="weixin" href="#"><i class="iconfont icon-weixin"/></a></li>
           <li><a id="qq" class="qq" target="_blank" href="#"><i class="iconfont icon-qq"/></a></li>
         </ul>
       </div>
@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       user: {
-        mobile: '',
+        userInfo: '',
         password: ''
       }
     }
@@ -66,7 +66,7 @@ export default {
       // 执行登录
       loginApi.submitLogin(this.user).then(response => {
         // 登录成功后将jwtToken写入cookie
-        cookie.set('lakeCollege_jwt_token', response.data.token, { domain: 'localhost' })
+        cookie.set('lakeCollege_jwt_token', response.data.token)
         // 跳转到首页
         // window.location.href = '/'
         if (document.referrer.indexOf('register') !== -1) {

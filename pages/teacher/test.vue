@@ -1,6 +1,6 @@
 <template>
   <div>
-    讲师列表
+    作者列表
     <div v-for="(item,index) in items" :key="index">
       <a :href="'teacher/'+item.id">{{ item.name }}</a>
     </div>

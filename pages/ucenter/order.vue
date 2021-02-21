@@ -23,8 +23,7 @@
             border
             fit
             highlight-current-row>
-
-            <el-table-column label="课程信息" align="center" >
+            <el-table-column label="视频信息" align="center" >
               <template slot-scope="scope">
                 <div class="info" >
                   <div class="pic">
@@ -36,7 +35,7 @@
                 </div>
               </template>
             </el-table-column>
-            <el-table-column label="讲师名称" width="100" align="center">
+            <el-table-column label="作者名称" width="100" align="center">
               <template slot-scope="scope">
                 {{ scope.row.teacherName }}
               </template>

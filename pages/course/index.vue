@@ -1,17 +1,17 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
-    <!-- 课程列表 开始 -->
+    <!-- 视频集列表 开始 -->
     <section class="container">
       <header class="comm-title">
         <h2 class="fl tac">
-          <span class="c-333">全部课程</span>
+          <span class="c-333">全部视频</span>
         </h2>
       </header>
       <section class="c-sort-box">
         <section class="c-s-dl">
           <dl>
             <dt>
-              <span class="c-999 fsize14">课程类别</span>
+              <span class="c-999 fsize14">视频类别</span>
             </dt>
             <dd class="c-s-dl-li">
               <!-- 一级类别 开始-->
@@ -140,7 +140,7 @@
         </div>
       </section>
     </section>
-    <!-- /课程列表 结束 -->
+    <!-- /视频集列表 结束 -->
   </div>
 </template>
 
@@ -163,12 +163,12 @@ export default {
     searchObj.priceSort = query.priceSort || ''
     searchObj.type = query.type || '' // 1：正序，2：倒序
 
-    // 课程列表的查询
+    // 视频集列表的查询
     const courseListResponse = await courseApi.getList(searchObj)
     const courseList = courseListResponse.data.courseList
     // console.log('courseList', courseList)
 
-    // 课程分类列表的查询
+    // 视频集分类列表的查询
     const subjectNestedListResponse = await courseApi.getSubjectNestedList()
     const subjectNestedList = subjectNestedListResponse.data.items
     // 遍历一级分类：查询一级分类下的二级分类
@@ -181,9 +181,9 @@ export default {
     }
 
     return {
-      courseList, // 课程列表
-      subjectNestedList, // 课程分类列表
-      subSubjectList, // 课程二级分类列表
+      courseList, // 视频集列表
+      subjectNestedList, // 视频集分类列表
+      subSubjectList, // 视频集二级分类列表
       searchObj // 查询对象
     }
   },
