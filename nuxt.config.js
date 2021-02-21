@@ -1,7 +1,8 @@
 module.exports = {
 
   server: {
-    port: 3001 // 线上端口
+    port: 3001, // 线上端口
+    host: '0.0.0.0'
   },
 
   /*
@@ -37,7 +38,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    } 
   },
 
   plugins: [
@@ -45,6 +46,7 @@ module.exports = {
     { src: '~/plugins/element-ui-plugin.js', ssr: false },
     { src: '~/plugins/vue-qriously-plugin.js', ssr: true },
     { src: '~/plugins/tcplayer.js', ssr: false }
-  ]
+  ],
+
 }
 
