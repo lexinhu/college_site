@@ -62,7 +62,7 @@
                   <el-button type="text" size="mini" icon="el-icon-edit">去支付</el-button>
                 </router-link>
                 <router-link v-if="scope.row.status === 1" :to="'/course/'+scope.row.courseId">
-                  <el-button type="text" size="mini" icon="el-icon-edit">去学习</el-button>
+                  <el-button type="text" size="mini" icon="el-icon-edit">去观看</el-button>
                 </router-link>
                 <i
                   class="el-icon-delete"

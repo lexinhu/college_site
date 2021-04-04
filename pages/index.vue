@@ -29,7 +29,7 @@
                         class="img-responsive"
                       >
                       <div class="cc-mask">
-                        <a :href="'/course/'+course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                        <a :href="'/course/'+course.id" title="开始观看" class="comm-btn c-btn-1">开始观看</a>
                       </div>
                     </section>
                     <h3 class="hLh30 txtOf mt10">
@@ -42,7 +42,7 @@
                       <i class="c-orange fsize12 f-fA"> ￥{{ course.price }}</i>
                     </span>
                     <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">{{ course.viewCount }}人学习</i>
+                      <i class="c-999 f-fA">{{ course.viewCount }}人观看</i>
                       |
                       <i class="c-999 f-fA">{{ course.buyCount }}人购买</i>
                     </span>

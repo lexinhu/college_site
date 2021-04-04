@@ -112,7 +112,7 @@
                   <section class="course-img">
                     <img :src="item.cover" :alt="item.title" class="img-responsive">
                     <div class="cc-mask">
-                      <a :href="'/course/'+item.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                      <a :href="'/course/'+item.id" title="开始观看" class="comm-btn c-btn-1">开始观看</a>
                     </div>
                   </section>
                   <h3 class="hLh30 txtOf mt10">
@@ -126,7 +126,7 @@
                       <i class="c-orange fsize12 f-fA"> ￥{{ item.price }}</i>
                     </span>
                     <span class="fl jgAttr c-ccc f-fA">
-                      <i class="c-999 f-fA">{{ item.viewCount }}人学习</i>
+                      <i class="c-999 f-fA">{{ item.viewCount }}人观看</i>
                       |
                       <i class="c-999 f-fA">{{ item.buyCount }}人购买</i>
                     </span>
