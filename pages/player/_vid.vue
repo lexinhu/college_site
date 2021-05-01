@@ -31,7 +31,7 @@ export default {
     this.options.fileID = this.vid
   },
   methods: {
-
+    x
   }
 }
 </script>
