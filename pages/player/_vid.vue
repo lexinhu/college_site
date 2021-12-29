@@ -30,9 +30,7 @@ export default {
   created() {
     this.options.fileID = this.vid
   },
-  methods: {
-    x
-  }
+  methods: {}
 }
 </script>
 <style lang='scss' scoped>
