@@ -24,6 +24,7 @@ export default {
   },
   data() {
     return {
+      // 需要将 AppID 修改成自己的，在腾讯云点播后台播放器预览那查看
       options: { fileID: this.vid, appID: '1251745932', autoplay: false }
     }
   },
