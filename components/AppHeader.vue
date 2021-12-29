@@ -143,7 +143,7 @@ export default {
       })
     },
     logout() {
-      cookie.set('lakeCollege_jwt_token', '', { domain: 'localhost' })
+      cookie.set('lakeCollege_jwt_token', '')
       // 跳转页面
       window.location.href = '/'
     }
