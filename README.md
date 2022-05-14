@@ -1,4 +1,4 @@
-> 小湖视频网，前端前台- nuxt 项目，已写好 Dockerfile 文件，方便大家打包成 Docker 容器部署。
+> 小湖视频网，前端前台-nuxt 项目，已写好 Dockerfile 文件，方便大家打包成 Docker 容器部署。
 
 # 本地调试：
 
