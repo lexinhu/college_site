@@ -18,7 +18,7 @@
     "element-ui": "^2.4.6",
     "js-cookie": "^2.2.0",
     "less-loader": "^5.0.0",
-    "node-sass": "npm:dart-sass@^1.25.0",
+    "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
     "vod-js-sdk-v6": "^1.4.11",
     "vue-awesome-swiper": "^3.1.3",
